@@ -1,0 +1,18 @@
+CREATE TABLE Produtos (
+    id_produto INT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preço DECIMAL(10, 2) NOT NULL,
+    estoque INT NOT NULL,
+    perecível BOOLEAN NOT NULL,
+    marca VARCHAR(100),
+    nacionalidade VARCHAR(50)
+);
+
+INSERT INTO Produtos (id_produto, nome, preço, estoque, perecível, marca, nacionalidade) VALUES
+(1, 'Arroz', 5.99, 100, 0, 'Tio João', 'Brasil'),
+(2, 'Feijão', 3.99, 80, 0, 'Camil', 'Brasil'),
+(3, 'Leite', 2.49, 120, 1, 'Nestlé', 'Brasil'),
+(4, 'Maçã', 1.99, 50, 1, NULL, 'Brasil'),
+(5, 'Café', 8.99, 60, 0, 'Melitta', 'Brasil');
+
+SELECT * FROM Produtos;
